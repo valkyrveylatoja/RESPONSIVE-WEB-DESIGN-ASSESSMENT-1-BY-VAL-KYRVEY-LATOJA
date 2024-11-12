@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Protest+Guerrilla&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Protest+Guerrilla&display=swap');
+
+
+
+/* main style for the logo */
+.logo{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    width: 200px;
+    height: 200px;
+    img{
+        width:100%;
+        height: 100%;
+    }
+}
+
+/* main style for menu */
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    font-size: 20px;
+    padding-bottom: 50px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* padding for header1 */
+.website{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+/* style for the white box */
+.header1{
+    margin-bottom: -10px;
+    background-color: white;
+    border: solid, 1px, black;
+
+    h1{
+        margin: 0 auto;
+        font-size: 70px;
+        font-weight: 100;
+        padding: 50px;
+        padding-bottom: 0px;
+        font-family: "Protest Guerrilla", sans-serif;
+    }
+
+    h2{
+        margin: 0 auto;
+        font-size:35px;
+        font-weight: bolder;
+        font-family: "Protest Guerrilla", sans-serif;
+        padding-bottom: 50px;
+    }
+
+
+    p{
+        padding-bottom: 50px;
+    }
+    /* layout for the 3 columns of texts */
+    article{
+        margin: 50px;
+        column-count: 3;
+        column-gap: 50px;
+        h1{
+            padding-bottom: 50px;
+            font-size: 30px;
+            margin: 0;
+            font-family: "Protest Guerrilla", sans-serif;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+            font-family: "Josefin Sans", sans-serif;
+            padding-bottom: 50px;
+        }
+    }
+}
+/* padding for most texts within header1 to separate the padding of the collage */
+.padding{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.firstparagraph{
+    padding-right: 150px;
+}
+
+.firstparagraph > p{
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body{
+    background-color: #e9e9e9;
+}
+/* using grids for the collage layout */
+.collage{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    'img1 img1 img2 img3'
+    'img1 img1 img4 img5';
+    .hugeimage{
+        display: block;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        border: solid 1px black;
+    }
+}
+
+#image1{
+    grid-area: img1;
+}
+#image2{
+    grid-area: img2;
+}
+#image3{
+    grid-area: img3;
+}
+#image4{
+    grid-area: img4;
+}
+#image5{
+    grid-area: img5;
+}
+/* using grids for the author layout */
+.theauthor{
+    padding: 70px;
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    grid-template-areas:
+    'title pfp'
+    'paragraph pfp';
+    img{
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        padding-top: 30px;
+    }
+    h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    p{
+        padding: 30px;
+        font-family: "Josefin Sans", sans-serif;
+    }
+}
+
+#title{
+    grid-area: title;
+}
+#paragraph{
+    grid-area: paragraph;
+}
+#pfp{
+    grid-area: pfp;
+}
+/* style for footer */
+footer{
+    text-align: center;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 50px;
+    padding-bottom: 0px;
+    border: solid 1px black;
+    background-color: #14181d;
+    p{
+        padding: 0px;
+    }
+}
+/* size for tablet where there are padding, layout and font size adjustments */
+@media only screen and (max-width: 1024px){
+    body{
+        padding: 0;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    .logo{
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 30px;
+        padding-top: 25px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        font-size: 25px;
+        padding-bottom: 30px;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .website{
+        padding-left: 70px;
+        padding-right: 70px;
+        /* headers aligned to center when on tablet size */
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+
+    .firstparagraph{
+        padding-right: 50px;
+    }
+    .header1{
+        article{
+            column-count: 1;  /* articles are now in 1 column when on tablet size */
+            column-gap: 50px;
+            h1{
+                padding-bottom: 50px;
+                font-size: 30px;
+                margin: 0;
+                font-family: "Protest Guerrilla", sans-serif;
+            }
+            p{
+                padding: 0;
+                margin: 0;
+                font-family: "Josefin Sans", sans-serif;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    .collage{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr); /* rearranging the grid layout when on tablet size */
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas:
+        'img2 img3'
+        'img4 img5';
+        img{
+            width: 100%;
+            height: auto;
+        }
+        /* removing feature album when on tablet size */
+        #image1{
+            display: none;
+        }
+    }
+    .theauthor{
+        padding: 50px ;
+    }
+}
+/* size for large mobile adjusting font-size and layouts for legibility*/
+@media only screen and (max-width: 720px){
+
+    .logo{
+        padding-bottom: 20px;
+    }
+
+    .menu{
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+        gap: 50px;
+    }
+    .website{
+        margin-left: -8px;
+        margin-right: -8px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .header{
+        article{
+            p{
+                padding-bottom: 20px;
+            }
+        }
+    }
+    .header1{
+        p{
+            padding-bottom: 0px;
+            font-size: 30px;
+        }
+        h2{
+            font-size: 50px;
+        }
+    }
+    .collage{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr); /* only on 1 column when on large mobile size */
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+        'img2'
+        'img3'
+        'img4'
+        'img5';
+    }
+    /* rearranging the layout for the author when on large mobile size */
+    .theauthor{
+        grid-template-columns: repeat(1);
+        grid-template-rows: repeat(3);
+        grid-template-areas:
+        'pfp'
+        'title'
+        'paragraph';
+        #pfp{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+    }
+    footer{
+        padding: 0px;
+    }
+
+}
+/* size for small mobile */
+@media only screen and (max-width: 540px){
+    .menu{
+        font-size: 25px;
+        gap: 50px;
+    }
+    .website{
+        h1{
+            padding-left:12px;
+            padding-right:12px;
+        }
+        h2{
+            padding-left:12px;
+            padding-right:12px;
+        }
+    }
+    .header1{
+        article{
+            margin: 10px;
+        }
+        p{
+            padding-left:12px;
+            padding-right:12px;
+        }
+    }
+    .padding{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
+
+body{
+    margin: 0 auto;
+    background-color: #231651;
+}
+
+h1{
+    font-family: "Teko", serif;
+    color: #070410;
+}
+/* button style */
+button{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Teko", serif;
+    background-color: #EEF36A;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 20px;
+    border: solid 5px #070410;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    h2{
+        font-size: 2em;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+}
+
+p{
+    font-family: "Lato", serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #070410;
+}
+/* header style */
+.header{
+    display: flex;
+    background-color: #4DCCBD;
+    border-bottom: solid 5px #070410;
+    box-shadow: 0px 10px rgba(0, 0, 0, 0.5);
+    h1{
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+
+    .button{
+        padding-top: 3px;
+        margin-right: 10px;
+    }
+
+}
+
+.menu{
+    display: flex;
+    text-align: center;
+    gap:48px;
+    margin: 0 auto;
+}
+/* layout of the website using grids */
+.website {
+    padding-top: 75px;
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5);
+    grid-template-areas:
+    'movie1 movie1'
+    'movie2 movie3'
+    'movie4 movie4'
+    'movie5 movie5'
+    'movie6 movie6';
+    h1{
+        font-size: 2.5em;
+    }
+    p{
+        margin: 0;
+    }
+}
+.website > div{
+    margin: 30px;
+    padding: 30px;
+    border: solid #070410 5px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+/* nesting a grid from a grid */
+#movie1{
+    display: grid;
+    padding: 0px;
+    padding-bottom: 50px;
+    grid-area: movie1;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3);
+    grid-template-areas:
+    'movieposter movieposter'
+    'title button'
+    'description button';
+
+    #movieposter1{
+        grid-area: movieposter;
+    }
+
+    #title1{
+        padding-left: 48px;
+        grid-area: title;
+        text-align: left;
+    }
+    #description1{
+        padding-left: 48px;
+        grid-area: description;
+        text-align: left;
+        font-size: 20px;
+    }
+    #button1{
+        grid-area: button;
+    }
+
+    img{
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 5px solid #070410;
+    };
+
+    button{
+        height: 50%;
+        margin-top: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+}
+
+#movie2{
+    padding: 0px;
+    grid-area: movie2;
+
+    #title2{
+        margin-top: 48px;
+        margin-bottom: 16px;
+    }
+
+    #description2{
+        padding-left: 30px;
+        padding-right: 48px;
+        text-align: left;
+        padding-bottom: 16px;
+    }
+
+
+    img{
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 5px solid #070410;
+    };
+
+    button{
+        width: 70%;
+        margin-bottom: 16px;
+    };
+    
+    h1{
+        font-size: 60px;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+}
+
+#movie3{
+    padding: 0px;
+    grid-area: movie3;
+
+    #title3{
+        margin-top: 48px;
+        margin-bottom: 16px;
+    }
+
+    #description3{
+        padding-left: 30px;
+        padding-right: 48px;
+        text-align: left;
+        padding-bottom: 36px;
+    }
+
+
+    img{
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 5px solid #070410;
+    };
+
+    button{
+        width: 70%;
+        margin-bottom: 16px;
+    };
+    
+    h1{
+        font-size: 60px;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+}
+
+#movie4{
+    display: grid;
+    padding: 0px;
+    grid-area: movie4;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(3);
+    grid-template-areas:
+    'movieposter title'
+    'movieposter description'
+    'movieposter button';
+
+    #movieposter4{
+        grid-area: movieposter;
+    }
+    #title4{
+        grid-area: title;
+    }
+    #description4{
+        grid-area: description;
+        padding-left: 48px;
+        padding-right: 48px;
+        font-size: 20px;
+    }
+    #button4{
+        grid-area: button;
+        margin-left: 48px;
+        margin-right: 48px;
+        margin-bottom: 16px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-right: 5px solid #070410;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+}
+
+#movie5{
+    display: grid;
+    padding: 0px;
+    grid-area: movie5;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(3);
+    grid-template-areas:
+    'movieposter title'
+    'movieposter description'
+    'movieposter button';
+
+    #movieposter5{
+        grid-area: movieposter;
+    }
+    #title5{
+        grid-area: title;
+    }
+    #description5{
+        grid-area: description;
+        padding-left: 48px;
+        padding-right: 48px;
+        font-size: 20px;
+    }
+    #button5{
+        grid-area: button;
+        margin-left: 48px;
+        margin-right: 48px;
+        margin-bottom: 16px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-right: 5px solid #070410;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+}
+
+#movie6{
+    display: grid;
+    padding: 0px;
+    grid-area: movie6;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(3);
+    grid-template-areas:
+    'movieposter title'
+    'movieposter description'
+    'movieposter button';
+
+    #movieposter6{
+        grid-area: movieposter;
+    }
+    #title6{
+        grid-area: title;
+    }
+    #description6{
+        grid-area: description;
+        padding-left: 48px;
+        padding-right: 48px;
+        font-size: 20px;
+    }
+    #button6{
+        grid-area: button;
+        margin-left: 48px;
+        margin-right: 48px;
+        margin-bottom: 16px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        border-right: 5px solid #070410;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+}
+/* size for tablet adjusting the website layout, font sizes and padding elegibility */
+@media only screen and (max-width: 1024px){
+    .website{
+        padding-left: 50px;
+        padding-right: 50px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3);
+        grid-template-areas:
+        'movie1 movie2'
+        'movie3 movie4'
+        'movie5 movie6';
+
+    }
+
+    .website > div{
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding: 30px;
+        border: solid #070410 5px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #movie1{
+        padding-bottom: 32px;
+        margin-right: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4);
+        grid-template-areas:
+        'movieposter'
+        'title'
+        'description'
+        'button';
+
+        #title1{
+            text-align: center;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+        #description1{
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+        }
+
+        button{
+            height: 80%;
+            margin: 0 auto;
+            width: 70%;
+            margin-bottom: 16px;
+        };
+    
+    }
+
+    #movie2{
+        padding-bottom: 32px;
+        margin-left: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4);
+        grid-template-areas:
+        'movieposter'
+        'title'
+        'description'
+        'button';
+        
+        #movieposter2{
+            grid-area: movieposter;
+        }
+
+        #title2{
+            margin-top: 32px;
+            grid-area: title;
+            text-align: center;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+        #description2{
+            grid-area: description;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            font-size: 20px;
+        }
+
+        #button2{
+            grid-area: button;
+        }
+    }
+
+    #movie3{
+        padding-bottom: 32px;
+        margin-right: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4);
+        grid-template-areas:
+        'movieposter'
+        'title'
+        'description'
+        'button';
+        
+        #movieposter3{
+            grid-area: movieposter;
+        }
+
+        #title3{
+            font-size: 2.5em;
+            margin-top: 32px;
+            grid-area: title;
+            text-align: center;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+        #description3{
+            grid-area: description;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            font-size: 20px;
+        }
+
+        #button3{
+            grid-area: button;
+        }
+    }
+
+    #movie4{
+        padding-bottom: 32px;
+        margin-left: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4);
+        grid-template-areas:
+        'movieposter'
+        'title'
+        'description'
+        'button';
+        
+        #movieposter4{
+            grid-area: movieposter;
+        }
+
+        #title4{
+            font-size: 2.5em;
+            margin-top: 32px;
+            grid-area: title;
+            text-align: center;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+        #description4{
+            grid-area: description;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        #button4{
+            grid-area: button;
+        }
+
+        img{
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 12px;
+            border-right: none;
+            border-bottom: 5px solid #070410;
+        }
+    }
+
+    #movie5{
+        padding-bottom: 32px;
+        margin-right: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4);
+        grid-template-areas:
+        'movieposter'
+        'title'
+        'description'
+        'button';
+        
+        #movieposter5{
+            grid-area: movieposter;
+        }
+
+        #title5{
+            font-size: 2.5em;
+            margin-top: 32px;
+            grid-area: title;
+            text-align: center;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+        #description5{
+            grid-area: description;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        #button5{
+            grid-area: button;
+        }
+
+        img{
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 12px;
+            border-right: none;
+            border-bottom: 5px solid #070410;
+        }
+    }
+
+    #movie6{
+        padding-bottom: 32px;
+        margin-left: 20px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4);
+        grid-template-areas:
+        'movieposter'
+        'title'
+        'description'
+        'button';
+        
+        #movieposter6{
+            grid-area: movieposter;
+        }
+
+        #title6{
+            font-size: 2.5em;
+            margin-top: 32px;
+            grid-area: title;
+            text-align: center;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
+
+        #description6{
+            grid-area: description;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        #button6{
+            grid-area: button;
+        }
+
+        img{
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 12px;
+            border-right: none;
+            border-bottom: 5px solid #070410;
+        }
+
+        button{
+            height: 60%;
+        }
+    }
+}
+/* size for mobile adjusting the website layout, font sizes and padding elegibility */
+@media only screen and (max-width: 720px){
+
+    .header{
+        h1{
+            padding-left: 16px;
+            font-size:70px;
+            margin-bottom: 0;
+        }
+
+        button{
+
+            margin-left: auto;
+            padding-left: 16px;
+            padding-right: 16px
+        };
+
+    }
+    .menu{
+        display: none; /* removing the menu */
+    }
+    .website{
+        padding-left: 0px;
+        padding-right: 0px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6);
+        grid-template-areas:
+        'movie1'
+        'movie2'
+        'movie3'
+        'movie4'
+        'movie5'
+        'movie6';
+
+        h1{
+            font-size: 2em;
+        }
+    }
+
+    #movie1{
+        padding-bottom: 16px;
+        margin-right: 0px;
+
+
+        #title1{
+            margin-top: 16px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        #description1{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5em;
+        }
+    }
+    #movie2{
+        padding-bottom: 16px;
+        margin-left: 0px;
+
+        #title2{
+            margin-top: 16px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        #description2{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5em;
+        }
+    }
+    #movie3{
+        padding-bottom: 16px;
+        margin-right: 0px;
+
+        #title3{
+            margin-top: 16px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        #description3{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5em;
+        }
+    }
+    #movie4{
+        padding-bottom: 16px;
+        margin-left: 0px;
+
+        #title4{
+            margin-top: 16px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        #description4{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5em;
+        }
+    }
+    #movie5{
+        padding-bottom: 16px;
+        margin-right: 0px;
+
+        #title5{
+            margin-top: 16px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        #description5{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5em;
+        }
+    }
+    #movie6{
+        padding-bottom: 16px;
+        margin-left: 0px;
+
+        #title6{
+            margin-top: 16px;
+            padding-right: 16px;
+            padding-left: 16px;
+        }
+
+        #description6{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            font-size: 1.5em;
+        }
+    }
+
+}
